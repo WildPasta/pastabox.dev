@@ -1,0 +1,11 @@
+<!-- Custom shortcode for displaying GIFs based on the provided source -->
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $caption := .Get "caption" }}
+{{ $image := .Page.Resources.GetMatch $src }}
+{{ with $image }}
+<figure>
+  <img src="{{ .RelPermalink }}" alt="{{ $alt }}">
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{ end }}

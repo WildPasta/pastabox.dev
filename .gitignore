@@ -1,0 +1,5 @@
+/public/
+/resources/_gen/
+to_be_published/
+core.1
+.hugo_build.lock

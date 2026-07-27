@@ -1,0 +1,31 @@
+[[main]]
+  identifier = "posts"
+  pre        = "✒"
+  post       = ""
+  name       = "Posts"
+  url        = "/posts/"
+  title      = "Personnal blogposts"
+  weight     = 10
+
+[[main]]
+  identifier = "writeups"
+  pre        = "🚩"
+  post       = ""
+  name       = "Writeups"
+  url        = "/writeups/"
+  title      = "Personnal WU"
+  weight     = 20
+
+[[main]]
+  identifier = "projects"
+  pre        = "📗"
+  post       = ""
+  name       = "Projects"
+  url        = "/projects/"
+  title      = "Side Projects"
+  weight     = 30
+
+[[main]]
+  name = "🔎 whoami"
+  pageRef = "whoami"
+  weight = 40

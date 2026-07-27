@@ -1,0 +1,311 @@
+# -- Site Configuration --
+
+theme = "DoIt"
+baseURL = "https://pastabox.dev/"
+defaultContentLanguage = "en"
+
+# pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
+
+# website title
+title = "wildpasta's blog"
+# site description
+description = "Static blog hosting writeups and side projects"
+# site keywords
+keywords = ["infosec", "writeups", "cybersecurity", "forensics", "malware analysis", "hacking", "CTF"]
+
+enableRobotsTXT = true
+summaryLength = 0
+
+buildDrafts = false
+buildFuture = false
+
+[imaging]
+anchor = 'Center'
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[languages]
+[languages.en]
+label = "English"
+weight = 1
+
+[languages.fr]
+label = "Français"
+weight = 2
+
+[params]
+# site default theme ("light", "dark", "black", "auto")
+defaultTheme = "auto"
+# public git repo url only then enableGitInfo is true
+gitRepo = ""
+mainSections = ["posts", "writeups"]
+
+fingerprint = ""
+dateFormat = "2006-01-02"
+
+# enable PWA support
+enablePWA = false
+# [Experimental] cache remote images in markdown, more info: https://github.com/HEIGE-PCloud/DoIt/pull/860#issue-1574342372
+cacheRemoteImages = true
+# [Experimental] generate image srcset attribute with hugo image processing feature.
+optimizeImages = true
+# [Experimental] resize method for srcset attribute in optimizeImages, more info: https://gohugo.io/content-management/image-processing/#image-processing-options
+srcsetSmallResizeMethod = "700x webp Lanczos q75"
+srcsetDefaultResizeMethod = "1200x webp Lanczos q75"
+srcsetLargeResizeMethod = "2000x webp Lanczos q75"
+
+[params.author]
+name = "wildpasta"
+email = "contact@pastabox.dev"
+link = ""
+avatar = ""
+gravatarEmail = ""
+
+# Search config
+[params.search]
+enable = true
+# type of search engine ("algolia", "fuse")
+type = "fuse"
+# max index length of the chunked content
+contentLength = 4000
+# placeholder of the search bar
+placeholder = ""
+# max number of results length
+maxResultLength = 10
+# snippet length of the result
+snippetLength = 30
+# HTML tag name of the highlight part in results
+highlightTag = "em"
+# whether to use the absolute URL based on the baseURL in search index
+absoluteURL = false
+[params.search.algolia]
+index = ""
+appID = ""
+searchKey = ""
+[params.search.fuse]
+# https://fusejs.io/api/options.html
+isCaseSensitive = false
+minMatchCharLength = 2
+findAllMatches = false
+location = 0
+threshold = 0.3
+distance = 100
+ignoreLocation = false
+useExtendedSearch = false
+ignoreFieldNorm = false
+
+[params.image]
+# cache remote images for better optimisations
+cacheRemote = true
+# Image resizing and optimisation
+optimise = true
+
+# Header config
+[params.header]
+# Theme change mode
+# theme change mode ("switch", "select")
+themeChangeMode = "switch"
+# Header title config
+[params.header.title]
+# URL of the LOGO
+logo = ""
+# title name
+name = "cd /home/wildpasta/"
+# you can add extra information before the name (HTML format is supported), such as icons
+pre = ""
+# you can add extra information after the name (HTML format is supported), such as icons
+post = ""
+# whether to use typeit animation for title name
+typeit = true
+
+# Footer config
+[params.footer]
+enable = true
+# Custom content (HTML format is supported)
+custom = ''
+# whether to show Hugo and theme info
+hugo = true
+# Hosted on (HTML format is supported)
+# <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+hostedOn = ''
+# whether to show copyright info
+copyright = true
+# whether to show the author
+author = true
+# Site creation time
+since = 2022
+# ICP info only in China (HTML format is supported)
+icp = ""
+# license info (HTML format is supported)
+license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+# Section (all posts) page config
+[params.section]
+# special amount of posts in each section page
+paginate = 20
+# date format (month and day)
+dateFormat = "01-02"
+# amount of RSS pages
+rss = 10
+# recently updated posts settings
+[params.section.recentlyUpdated]
+enable = false
+rss = false
+days = 30
+maxCount = 10
+
+# List (category or tag) page config
+[params.list]
+# special amount of posts in each list page
+paginate = 20
+# date format (month and day)
+dateFormat = "01-02"
+# amount of RSS pages
+rss = 10
+
+# Home page config
+[params.home]
+# amount of RSS pages
+rss = 10
+# Home page profile
+[params.home.profile]
+enable = true
+# Gravatar Email for preferred avatar in home page
+gravatarEmail = ""
+# URL of avatar shown in home page
+# Place your avatar file under static or assets directory
+# The filepath is relative to the static or assets directory
+avatarURL = "/img/wildpasta-avatar.png"
+# URL the avatar links to
+avatarLinkURL = ""
+# title shown in home page (HTML format is supported)
+title = "Hosting writeups and messy projects"
+# subtitle shown in home page
+#subtitle = ""
+# whether to use typeit animation for subtitle
+typeit = true
+# whether to show social links
+social = true
+# disclaimer (HTML format is supported)
+disclaimer = ""
+# Home page posts
+[params.home.posts]
+enable = true
+# special amount of posts in each home posts page
+paginate = 6
+# replaced with hiddenFromHomePage in params.page
+# default behavior when you don't set "hiddenFromHomePage" in front matter
+defaultHiddenFromHomePage = false
+
+# Social config about the author
+[params.social]
+GitHub = "wildpasta"
+Twitter = "wildpastasavana"
+BuyMeACoffee = "wildpasta"
+# Page config
+[params.page]
+# whether to hide a page from home page
+hiddenFromHomePage = false
+# whether to hide a page from search results
+hiddenFromSearch = false
+# whether to enable twemoji
+twemoji = false
+# whether to enable lightgallery
+lightgallery = false
+# whether to enable the ruby extended syntax
+ruby = true
+# whether to enable the fraction extended syntax
+fraction = true
+# whether to show link to Raw Markdown content of the content
+linkToMarkdown = true
+# configure the link to the source file of the post
+linkToSource = false
+# "https://github.com/user/repo/blob/main/{path}"
+# configure the link to edit the post
+linkToEdit = false
+# "https://github.com/user/repo/edit/main/{path}"
+# "https://gitlab.com/user/repo/-/edit/main/{path}"
+# "https://bitbucket.org/user/repo/src/main/{path}?mode=edit"
+# configure the link to report issue for the post
+linkToReport = false
+# "https://github.com/user/repo/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/user/repo/blob/main/{path}|"
+# whether to show the full text content in RSS
+rssFullText = false
+# whether to enable series navigation
+seriesNavigation = true
+# whether to enable last modified time
+enableLastMod = true
+# whether to enable word count
+enableWordCount = false
+# whether to enable reading time estimation
+enableReadingTime = true
+[params.page.toc]
+# whether to enable the table of the contents
+enable = true
+# whether to keep the static table of the contents in front of the post
+keepStatic = true
+# whether to make the table of the contents in the sidebar automatically collapsed
+auto = true
+
+[params.page.math]
+enable = true
+# default block delimiter is $$ ... $$ and \\[ ... \\]
+blockLeftDelimiter = ""
+blockRightDelimiter = ""
+# default inline delimiter is $ ... $ and \\( ... \\)
+inlineLeftDelimiter = ""
+inlineRightDelimiter = ""
+# KaTeX extension copy_tex
+copyTex = true
+# KaTeX extension mhchem
+mhchem = true
+# Use MathJax instead of KaTeX
+mathjax = false
+[params.page.code]
+# the maximum number of lines of displayed code by default
+maxShownLines = 15
+# whether to enable line numbers in the code block
+lineNos = true
+# whether to enable line wrapping in the code block
+wrap = false
+# whether to display the header in the code block
+header = true
+
+[params.page.share]
+enable = true
+Twitter = true
+Linkedin = true
+Reddit = true
+Mastodon = true
+
+[params.sponsor]
+enable = true
+bio = "If you find this post helpful, please consider sponsoring."
+link = "https://www.buymeacoffee.com/wildpasta"
+custom = "" # Custom HTML button
+
+# Cookie consent config
+[params.cookieconsent]
+enable = false
+# text strings used for Cookie consent banner
+[params.cookieconsent.content]
+message = ""
+dismiss = ""
+link = ""
+
+[sitemap]
+changefreq = 'weekly'
+filename = 'sitemap.xml'
+priority = 0.5
+
+# Permalinks config
+[Permalinks]
+# posts = ":year/:month/:contentbasename"
+posts = ":contentbasename"
+
+[taxonomies]
+author = "authors"
+category = "categories"
+tag = "tags"
+series = "series"
