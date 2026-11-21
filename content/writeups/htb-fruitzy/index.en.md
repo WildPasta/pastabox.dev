@@ -5,7 +5,7 @@ author: WildPasta
 author_url: "https://medium.com/@wildpasta"
 published: 2026-05-02
 source: Medium
-draft: true
+draft: false
 toc: false
 categories: ["writeups"]
 tags: ["hackthebox", "dfir", "writeups"]
